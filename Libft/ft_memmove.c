@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meguzqui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 19:50:29 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/12 20:16:17 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/22 20:13:51 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 		while (len < n)
 		{
 			(unsigned char *)s1[len] = (unsigned char *)s2[len];
-				len++;
+			len++;
 		}
 	}
 	return (s1);

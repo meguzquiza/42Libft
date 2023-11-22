@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meguzqui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 19:01:26 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/12 19:05:09 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/22 20:13:36 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,4 @@ int	ft_toupper(int i)
 	if (i >= 'a' && i <= 'z')
 		mayus = i - 32;
 	return (mayus);
-}	
+}
