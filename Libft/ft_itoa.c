@@ -3,57 +3,63 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meguzqui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 21:00:08 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/19 21:10:25 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:20:38 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	unsigned int	ft_number_size(int number)
+int	count_num_digits(int n)
 {
-	unsigned int	lenght;
+	int	length;
 
-	lenght = 0;
-	if (number == 0)
-		return (1);
-	if (number < 0)
-		lenght += 1;
-	while (number != 0)
+	length = 0;
+	if (n == -2147483648)
+		return (11);
+	if (n < 0)
 	{
-		number /= 10;
-		lenght++;
+		n = -n;
+		length++;
 	}
-	return (lenght);
+	if (n == 0)
+		return (1);
+	while (n > 9)
+	{
+		n = n / 10;
+		length++;
+	}
+	length++;
+	return (length);
 }
 
 char	*ft_itoa(int n)
 {
-	unsigned int	number;
-	unsigned int	lenght;
-	char			*string;
+	char		*str;
+	int			size;
+	long long	num;
 
-	lenght = ft_number_size(n);
-	string = (char *)malloc(sizeof(char) * (lenght + 1));
-	if (string == NULL)
+	num = n;
+	size = count_num_digits(num);
+	str = malloc((sizeof(char) * size) + 1);
+	if (!str)
 		return (NULL);
-	if (number < 0)
+	if (num == 0)
+		str[0] = '0';
+	str[size] = '\0';
+	if (num < 0)
 	{
-		string[0] = '-';
-		number = -n;
+		num *= -1;
+		str[0] = '-';
 	}
-	else
-		number = n;
-	if (number == 0)
-		string[0] = '0';
-	string[lenght] = '\0';
-	while (number != 0)
+	size--;
+	while (num)
 	{
-		string[lenght - 1] = (number % 10) + '0';
-		number = number / 10;
-		lenght--;
+		str[size] = ((num % 10) + '0');
+		num = num / 10;
+		size--;
 	}
-	return (string);
+	return (str);
 }

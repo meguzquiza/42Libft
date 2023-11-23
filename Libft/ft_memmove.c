@@ -6,7 +6,7 @@
 /*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 19:50:29 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/23 12:18:46 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/23 12:54:34 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 		while (len > 0)
 		{
 			len--;
-			(unsigned char *)s1[len] = (unsigned char *)s2[len];
+			((unsigned char *)s1)[len] = ((unsigned char *)s2)[len];
 		}
 	}
 	else
@@ -31,7 +31,7 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 		len = 0;
 		while (len < n)
 		{
-			(unsigned char *)s1[len] = (unsigned char *)s2[len];
+			((unsigned char *)s1)[len] = ((unsigned char *)s2)[len];
 			len++;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 22:15:47 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/23 12:19:54 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/23 13:18:39 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	j = 0;
 	if (s2 == NULL || s2[0] == '\0')
 		return ((char *)s1);
-	while (s1[x] != '\0' && i < n)
+	while (s1[x] != '\0' && x < n)
 	{
 		if (s1[x] == s2[j])
 		{

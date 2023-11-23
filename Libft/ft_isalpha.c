@@ -6,15 +6,15 @@
 /*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:54:45 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/23 12:21:19 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/23 13:06:50 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int i)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (('a' <= i && i <= 'z') || ('A' <= i && i <= 'Z'))
 		return (1);
 	else
 		return (0);
@@ -23,6 +23,6 @@ int	ft_isalpha(char c)
 /*int	main()
 {
 	char c = '4';
-	printf("%d\n", ft_isalpha(c));
+	printf("%i\n", ft_isalpha(c));
 	return 0;
 }*/
