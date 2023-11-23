@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meguzqui <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 21:50:05 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/10 21:56:32 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/23 12:19:08 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int i)
 {

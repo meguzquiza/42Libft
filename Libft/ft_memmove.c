@@ -6,9 +6,11 @@
 /*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 19:50:29 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/22 20:13:51 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/23 12:18:46 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
