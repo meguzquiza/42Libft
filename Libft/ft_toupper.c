@@ -3,21 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: meguzqui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 19:01:26 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/23 12:22:00 by meguzqui         ###   ########.fr       */
+/*   Created: 2023/11/26 20:33:10 by meguzqui          #+#    #+#             */
+/*   Updated: 2023/11/26 20:34:09 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int i)
+int	ft_toupper(int c)
 {
-	int	mayus;
-
-	mayus = 0;
-	if (i >= 'a' && i <= 'z')
-		mayus = i - 32;
-	return (mayus);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

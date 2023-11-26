@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: meguzqui <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/19 18:27:09 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/23 12:20:10 by meguzqui         ###   ########.fr       */
+/*   Created: 2023/11/26 20:48:56 by meguzqui          #+#    #+#             */
+/*   Updated: 2023/11/26 20:55:25 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*ptr;
 	size_t	i;
-	size_t	j;
-	char	*str;
 
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (str == 0)
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	ptr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!ptr)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (i < len && s[start + i])
 	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
+		ptr[i] = s[start + i];
+		i++;
 	}
-	str[j] = 0;
-	return (str);
+	ptr[i] = '\0';
+	return (ptr);
 }
