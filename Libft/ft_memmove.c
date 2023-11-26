@@ -6,7 +6,7 @@
 /*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 19:50:29 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/23 12:54:34 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/27 00:21:44 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	size_t	len;
 
 	len = 0;
+	if (!s1 && !s2)
+		return (NULL);
 	if (s2 < s1)
 	{
 		len = n;

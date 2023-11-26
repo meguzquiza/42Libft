@@ -6,7 +6,7 @@
 /*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 19:41:48 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/23 12:18:40 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/27 00:19:32 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	a = (char *)dest;
 	b = (char *)src;
+	if (!a && !b)
+		return (NULL);
 	while (i < n)
 	{
 		a[i] = b[i];

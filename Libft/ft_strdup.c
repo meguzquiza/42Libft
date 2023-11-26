@@ -6,7 +6,7 @@
 /*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 20:43:43 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/23 12:19:15 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/27 00:27:04 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ char	*ft_strdup(const char *s)
 	}
 	str[i] = '\0';
 	return (str);
+	free(str);
 }
