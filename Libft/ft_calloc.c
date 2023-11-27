@@ -6,7 +6,7 @@
 /*   By: meguzqui <meguzqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 20:22:29 by meguzqui          #+#    #+#             */
-/*   Updated: 2023/11/23 12:18:17 by meguzqui         ###   ########.fr       */
+/*   Updated: 2023/11/27 08:36:39 by meguzqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count == 0 || size == 0)
 	{
-		count = 1;
-		size = 1;
+		count = 0;
+		size = 0;
 	}
 	x = count * size;
 	z = malloc(x);
